@@ -19,6 +19,7 @@ namespace CountriesApp.Services
 
         public async Task Create(User user)
         {
+            user.Role = "ROLE_USER";
             await _context.Users.InsertOneAsync(user);
         }
 

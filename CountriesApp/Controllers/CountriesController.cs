@@ -26,7 +26,7 @@ namespace CountriesApp.Controllers
         }
 
         // GET: api/Countries/name
-        [HttpGet("{name}", Name = "Get")]
+        [HttpGet("{name}")]
         public async Task<IActionResult> Get(string name)
         {
             var country = await _countryService.GetCountry(name);
