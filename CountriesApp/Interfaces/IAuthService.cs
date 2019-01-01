@@ -4,8 +4,9 @@ using CountriesApp.Models;
 
 namespace CountriesApp.Interfaces
 {
-    interface IAuthService
+    public interface IAuthService
     {
-        User Authenticate(string username, string password);
+        User Auhtenticate(string name, string password);
+        User GetUser(string name);
     }
 }

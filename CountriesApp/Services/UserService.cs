@@ -52,5 +52,12 @@ namespace CountriesApp.Services
 
             return updateRsult.IsAcknowledged && updateRsult.ModifiedCount > 0;
         }
+
+        public User GetUserSync(string name)
+        {
+            FilterDefinition<User> filter = Builders<User>.Filter.Eq(x => x.FirstName, name);
+
+            return _context.Users.Find(filter).FirstOrDefault();
+        }
     }
 }

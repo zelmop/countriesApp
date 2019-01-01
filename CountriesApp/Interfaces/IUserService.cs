@@ -12,5 +12,6 @@ namespace CountriesApp.Interfaces
         Task Create(User user);
         Task<bool> Update(User user);
         Task<bool> Delete(string name);
+        User GetUserSync(string name);
     }
 }
