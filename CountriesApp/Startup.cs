@@ -23,6 +23,8 @@ namespace CountriesApp
         {
             services.AddScoped<CountryService>();
 
+            services.AddIdentityServer().AddDeveloperSigningCredential();
+
             services.AddCors();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -46,6 +48,8 @@ namespace CountriesApp
             {
                 app.UseHsts();
             }
+
+            app.UseIdentityServer();
 
             app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod());
 
