@@ -14,7 +14,7 @@ namespace CountriesApp.Models
 
         [BsonElement("capitalCity")]
         public string CapitalCity { get; set; }
-
+ 
         [BsonElement("population")]
         public int Population { get; set; }
     }
