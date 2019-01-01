@@ -3,8 +3,6 @@ using CountriesApp.Services;
 
 using Microsoft.AspNetCore.Mvc;
 
-using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CountriesApp.Controllers
